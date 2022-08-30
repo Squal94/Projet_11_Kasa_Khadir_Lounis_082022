@@ -1,11 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import D404 from "./pages/D404";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <div>
-      <h1>Bonjour</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
+        <Route path="*" element={<D404 />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
