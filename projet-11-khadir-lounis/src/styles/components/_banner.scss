@@ -1,0 +1,19 @@
+.banner {
+  border-radius: 25px;
+  background-image: linear-gradient(#6d6d6d58, #6d6d6d58),
+    url(../../assets/img/banniere-img.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 1240px;
+  height: 223px;
+  &__title {
+    font-size: 48px;
+    color: $white;
+  }
+}
