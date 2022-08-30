@@ -1,14 +1,22 @@
 .card {
   background: linear-gradient($card-linear-gradiant), $color-primary;
   border-radius: $secondary-radius;
+  margin: 20px;
   height: $card-size;
   width: $card-size;
   position: relative;
+  &--img {
+    height: 270px;
+    width: $card-size;
+    object-fit: cover;
+    border-top-left-radius: $secondary-radius;
+    border-top-right-radius: $secondary-radius;
+  }
 
   &__title {
     bottom: 5px;
     color: $white;
-    font-style: 18px;
+    font-size: 18px;
     margin: 10px;
     position: absolute;
     width: 90%;

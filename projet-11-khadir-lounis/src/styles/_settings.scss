@@ -8,12 +8,16 @@ $font-1: "Montserrat-1", sans-serif;
 $color-primary: #ff6060;
 $color-3: #282c34;
 $background-color: #f6f6f6;
-$white: rgb(243, 243, 243);
+$white: rgb(255, 255, 255);
 $desktop-width: 1240px;
 $card-size: 340px;
-$card-linear-gradiant: #ffffff00, #00000080;
+$card-linear-gradiant: #ffffff00, #00000048;
 $primary-radius: 25px;
 $secondary-radius: 10px;
+
+::-webkit-scrollbar {
+  display: none;
+}
 
 @mixin verticalCenter {
   display: flex;
