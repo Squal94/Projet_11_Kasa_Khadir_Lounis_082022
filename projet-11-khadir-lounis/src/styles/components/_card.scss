@@ -1,0 +1,16 @@
+.card {
+  background: linear-gradient($card-linear-gradiant), $color-primary;
+  border-radius: $secondary-radius;
+  height: $card-size;
+  width: $card-size;
+  position: relative;
+
+  &__title {
+    bottom: 5px;
+    color: $white;
+    font-style: 18px;
+    margin: 10px;
+    position: absolute;
+    width: 90%;
+  }
+}

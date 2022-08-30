@@ -10,7 +10,10 @@ $color-3: #282c34;
 $background-color: #f6f6f6;
 $white: rgb(243, 243, 243);
 $desktop-width: 1240px;
+$card-size: 340px;
+$card-linear-gradiant: #ffffff00, #00000080;
 $primary-radius: 25px;
+$secondary-radius: 10px;
 
 @mixin verticalCenter {
   display: flex;
