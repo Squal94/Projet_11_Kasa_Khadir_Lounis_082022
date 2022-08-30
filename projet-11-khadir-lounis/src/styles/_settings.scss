@@ -6,9 +6,11 @@
 $font-1: "Montserrat-1", sans-serif;
 
 $color-primary: #ff6060;
-// $color-2: salmon;
 $color-3: #282c34;
+$background-color: #f6f6f6;
 $white: rgb(243, 243, 243);
+$desktop-width: 1240px;
+$primary-radius: 25px;
 
 @mixin verticalCenter {
   display: flex;
@@ -24,7 +26,6 @@ $white: rgb(243, 243, 243);
 }
 
 body {
-  background: $white;
   font-family: $font-1;
   width: 100%;
   padding: 40px 100px;

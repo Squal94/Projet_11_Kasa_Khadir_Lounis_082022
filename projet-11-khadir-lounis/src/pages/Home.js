@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
+import Main from "../components/Main";
 import Nav from "../components/Nav";
 
 const Home = () => {
@@ -7,7 +8,7 @@ const Home = () => {
     <div>
       <Nav />
       <Banner />
-      <h1>Accueil</h1>
+      <Main />
     </div>
   );
 };

@@ -3,7 +3,7 @@
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1240px;
+  max-width: $desktop-width;
   margin: auto;
   &__logo {
     img {
@@ -13,7 +13,7 @@
   &__nav {
     &__ul {
       display: flex;
-      margin: 30px;
+      margin-right: -15px;
 
       a {
         text-decoration: none;

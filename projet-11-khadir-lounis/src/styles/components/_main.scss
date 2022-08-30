@@ -1,0 +1,11 @@
+.main {
+  border-radius: $primary-radius;
+  background-color: $background-color;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 829px;
+  margin: 20px auto;
+  max-width: $desktop-width;
+}
