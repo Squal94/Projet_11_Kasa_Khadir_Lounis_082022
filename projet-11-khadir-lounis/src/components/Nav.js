@@ -3,14 +3,27 @@ import { NavLink } from "react-router-dom";
 
 const Nav = () => {
   return (
-    <div className="nav">
-      <NavLink to="/">
-        <li>Accueil</li>
-      </NavLink>
-      <NavLink to="/about">
-        <li>A Propos</li>
-      </NavLink>
-    </div>
+    <header className="header">
+      <div className="header__logo">
+        <img src="./Logo.png" alt="Logo de l'entreprise Kasa" />
+      </div>
+      <nav className="header__nav">
+        <ul className="header__nav__ul">
+          <NavLink
+            to="/"
+            className={(nav) => (nav.isActive ? "header__nav__ul--active" : "")}
+          >
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={(nav) => (nav.isActive ? "header__nav__ul--active" : "")}
+          >
+            <li>A Propos</li>
+          </NavLink>
+        </ul>
+      </nav>
+    </header>
   );
 };
 

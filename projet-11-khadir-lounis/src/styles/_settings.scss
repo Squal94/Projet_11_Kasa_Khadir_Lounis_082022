@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "Montserrat-1";
+  src: url(../assets/fonts/Montserrat-Regular.otf);
+}
+
+$font-1: "Montserrat-1", sans-serif;
+
+$color-primary: #ff6060;
+// $color-2: salmon;
+$color-3: #282c34;
+$white: rgb(243, 243, 243);
+
+@mixin verticalCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $white;
+  font-family: $font-1;
+  width: 100%;
+  padding: 40px 100px;
+}
+li {
+  list-style-type: none;
+}
