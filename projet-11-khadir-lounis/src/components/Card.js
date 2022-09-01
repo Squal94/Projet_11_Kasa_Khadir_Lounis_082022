@@ -1,12 +1,12 @@
 import React from "react";
 
-const Card = (url, title) => {
+function Card(props) {
   return (
     <div className="card">
-      <img src={url} alt="" />
-      <h2 className="card__title">{title}</h2>
+      <img src={props.url} alt="" />
+      <h2 className="card__title">{props.title}</h2>
     </div>
   );
-};
+}
 
 export default Card;
