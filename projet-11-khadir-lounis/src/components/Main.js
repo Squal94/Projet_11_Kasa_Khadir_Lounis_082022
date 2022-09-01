@@ -1,10 +1,22 @@
 import React from "react";
 //import { card } from "./Card";
-//import logements from "../logements.json";
+import logements from "../logements.json";
+import Card from "./Card";
+import { NavLink } from "react-router-dom";
 // import { Data } from "./Data";
 
 const Main = () => {
-  return <div></div>;
+  return (
+    <main className="main">
+      {logements.map((logement) => {
+        return (
+          <NavLink id={logement.id} to={logement.cover} key={logement.id}>
+            {Card(logement)};
+          </NavLink>
+        );
+      })}
+    </main>
+  );
 };
 
 export default Main;

@@ -1,5 +1,6 @@
 // import React from "react";
 import { useState, useEffect } from "react";
+// import logements from "../logements.json";
 
 export function Data(url) {
   const [data, setData] = useState({});
