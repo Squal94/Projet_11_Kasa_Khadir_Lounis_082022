@@ -11,7 +11,7 @@ const Main = () => {
       {logements.map((logement) => {
         return (
           <NavLink id={logement.id} to={logement.cover} key={logement.id}>
-            {Card(logement)};
+            {Card(logement)}
           </NavLink>
         );
       })}

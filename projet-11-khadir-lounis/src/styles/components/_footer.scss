@@ -1,0 +1,32 @@
+.footer {
+  margin: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-footer-color;
+  position: relative;
+  height: 209px;
+  max-width: 1440px;
+  &__logo {
+    width: 122px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  &__copyright {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    color: $white;
+    bottom: 20px;
+    &--pic {
+      margin-right: 10px;
+      width: 15px;
+      color: $white;
+    }
+    &--txt {
+      font-size: 24px;
+    }
+  }
+}
