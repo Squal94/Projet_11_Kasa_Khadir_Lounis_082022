@@ -1,0 +1,43 @@
+.collapse {
+  border-radius: $tertiary-radius;
+  margin: 31px auto;
+  max-width: 1023px;
+  &__container {
+    background-color: $color-primary;
+    border-radius: $tertiary-radius;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 47px;
+    position: relative;
+
+    &__btn {
+      background-color: transparent;
+      border: none;
+      border-radius: $tertiary-radius;
+      color: $white;
+      font-size: 24px;
+      padding: 10px;
+      text-align: left;
+      width: 100%;
+      z-index: 2;
+    }
+    &__img {
+      position: absolute;
+      right: 10px;
+      width: 14px;
+    }
+  }
+
+  &__content {
+    background-color: $background-color;
+    border-bottom-left-radius: $tertiary-radius;
+    border-bottom-right-radius: $tertiary-radius;
+    color: $color-primary;
+    margin: auto;
+    font-size: 24px;
+    font-weight: 400;
+    padding: 27px;
+  }
+}

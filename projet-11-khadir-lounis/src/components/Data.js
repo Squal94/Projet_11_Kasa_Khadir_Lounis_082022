@@ -1,29 +1,57 @@
-// import React from "react";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // import logements from "../logements.json";
 
-export function Data(url) {
-  const [data, setData] = useState({});
+// export function useFetch() {
+//   const [state, setState] = useState({
+//     items: [],
+//     loading: true,
+//   });
 
-  const [isLoading, setLoading] = useState(true);
+//   useEffect(function () {
+//     (function () {
+//       const response = fetch(logements);
+//       const responseData = response.json();
+//       if (response.ok) {
+//         setState({
+//           items: responseData,
+//           loading: false,
+//         });
+//       } else {
+//         alert(JSON.stringify(responseData));
+//         setState((s) => ({ ...s, loading: false }));
+//       }
+//     })();
+//   }, []);
 
-  useEffect(() => {
-    if (!url) return;
+//   return [state.loading, state.items];
+// }
 
-    async function fetchData() {
-      const response = await fetch(url);
+// // import React from "react";
+// import { useState, useEffect } from "react";
+// // import logements from "../logements.json";
 
-      const data = await response.json();
+// export function Data(url) {
+//   const [data, setData] = useState({});
 
-      setData(data);
+//   const [isLoading, setLoading] = useState(true);
 
-      setLoading(false);
-    }
+//   useEffect(() => {
+//     if (!url) return;
 
-    setLoading(true);
+//     async function fetchData() {
+//       const response = await fetch(url);
 
-    fetchData();
-  }, [url]);
+//       const data = await response.json();
 
-  return { isLoading, data };
-}
+//       setData(data);
+
+//       setLoading(false);
+//     }
+
+//     setLoading(true);
+
+//     fetchData();
+//   }, [url]);
+
+//   return { isLoading, data };
+// }

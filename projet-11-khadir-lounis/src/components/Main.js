@@ -1,9 +1,7 @@
 import React from "react";
-//import { card } from "./Card";
-import logements from "../logements.json";
 import Card from "./Card";
 import { NavLink } from "react-router-dom";
-// import { Data } from "./Data";
+import logements from "../logements.json";
 
 const Main = () => {
   return (
@@ -20,6 +18,7 @@ const Main = () => {
 };
 
 export default Main;
+
 // import React from "react";
 // //import { card } from "./Card";
 // import logements from "../logements.json";
@@ -42,6 +41,17 @@ export default Main;
 //       })}
 //     </main>
 //   );
+// };
+
+// export default Main;
+
+//import { useFetch } from "./Data";
+// import { Data } from "./Data";
+// const Main = () => {
+//   const [loading, items] = useFetch();
+//   console.log(loading);
+//   console.log(items);
+//   return <div></div>;
 // };
 
 // export default Main;

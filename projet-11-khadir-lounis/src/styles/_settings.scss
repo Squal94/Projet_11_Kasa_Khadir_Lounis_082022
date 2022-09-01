@@ -15,6 +15,7 @@ $card-size: 340px;
 $card-linear-gradiant: #ffffff00, #00000048;
 $primary-radius: 25px;
 $secondary-radius: 10px;
+$tertiary-radius: 5px;
 
 ::-webkit-scrollbar {
   display: none;
@@ -40,4 +41,9 @@ body {
 }
 li {
   list-style-type: none;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s;
 }

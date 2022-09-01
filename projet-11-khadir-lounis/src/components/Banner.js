@@ -1,11 +1,11 @@
 import React from "react";
 
-const Banner = () => {
+export function Banner(txt, classname) {
   return (
-    <div className="banner">
-      <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
+    <div className={classname}>
+      <h1 className="banner__title">{txt}</h1>
     </div>
   );
-};
+}
 
-export default Banner;
+// Chez vous, partout et ailleurs
