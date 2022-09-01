@@ -1,0 +1,27 @@
+.main__404 {
+  margin: 66px auto;
+  max-width: 1240px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: $color-primary;
+  &--title {
+    margin: 100px auto;
+    font-size: 288px;
+    font-weight: 700;
+  }
+  &--txt {
+    font-size: 36px;
+    margin-bottom: 182px;
+  }
+
+  &--btn {
+    font-size: 18px;
+    color: $color-primary;
+    margin-bottom: 159px;
+    &:hover {
+      color: $color-3;
+    }
+  }
+}
