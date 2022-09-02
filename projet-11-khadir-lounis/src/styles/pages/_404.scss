@@ -6,14 +6,27 @@
   justify-content: center;
   align-items: center;
   color: $color-primary;
+  @include respond-to("small") {
+    margin: 195px auto;
+    max-width: $mobile-width;
+  }
   &--title {
     margin: 100px auto;
     font-size: 288px;
     font-weight: 700;
+    @include respond-to("small") {
+      font-size: 96px;
+      margin: 0 auto;
+    }
   }
   &--txt {
     font-size: 36px;
     margin-bottom: 182px;
+    @include respond-to("small") {
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 133px auto;
+    }
   }
 
   &--btn {
@@ -22,6 +35,10 @@
     margin-bottom: 159px;
     &:hover {
       color: $color-3;
+    }
+    @include respond-to("small") {
+      font-size: 14px;
+      margin-bottom: 0;
     }
   }
 }

@@ -5,12 +5,21 @@
   height: $card-size;
   width: $card-size;
   position: relative;
+  @include respond-to("small") {
+    max-width: $mobile-width;
+    height: $card-size-mobile-height;
+    margin: 20px 0;
+  }
   &--img {
     height: 270px;
     width: $card-size;
     object-fit: cover;
     border-top-left-radius: $secondary-radius;
     border-top-right-radius: $secondary-radius;
+    @include respond-to("small") {
+      max-width: $mobile-width;
+      height: 185px;
+    }
   }
 
   &__title {

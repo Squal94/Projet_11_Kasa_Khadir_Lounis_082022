@@ -2,6 +2,10 @@
   border-radius: $tertiary-radius;
   margin: 31px auto;
   max-width: 1023px;
+  @include respond-to("small") {
+    max-width: $mobile-width;
+    margin: 20px auto;
+  }
   &__container {
     background-color: $color-primary;
     border-radius: $tertiary-radius;
@@ -22,6 +26,9 @@
       text-align: left;
       width: 100%;
       z-index: 2;
+      @include respond-to("small") {
+        font-size: 13px;
+      }
     }
     &__img {
       position: absolute;
@@ -39,5 +46,8 @@
     font-size: 24px;
     font-weight: 400;
     padding: 27px;
+    @include respond-to("small") {
+      font-size: 12px;
+    }
   }
 }

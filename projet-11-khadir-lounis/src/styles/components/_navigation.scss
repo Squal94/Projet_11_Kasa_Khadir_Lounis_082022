@@ -1,3 +1,4 @@
+@import "./mixin";
 .header {
   display: flex;
   flex-flow: row nowrap;
@@ -5,9 +6,15 @@
   align-items: center;
   max-width: $desktop-width;
   margin: auto;
+  @include respond-to("small") {
+    max-width: $mobile-width;
+  }
   &__logo {
     img {
       height: 64px;
+      @include respond-to("small") {
+        height: 47px;
+      }
     }
   }
   &__nav {
@@ -20,6 +27,10 @@
         font-size: 24px;
         padding: 10px;
         margin: 10px;
+        @include respond-to("small") {
+          font-size: 12px;
+          margin: 5px;
+        }
 
         li {
           color: $color-primary;

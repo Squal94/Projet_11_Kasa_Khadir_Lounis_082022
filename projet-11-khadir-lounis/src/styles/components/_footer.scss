@@ -8,6 +8,9 @@
   position: relative;
   height: 209px;
   max-width: 1440px;
+  @include respond-to("small") {
+    max-width: $mobile-width;
+  }
   &__logo {
     width: 122px;
     height: 40px;
@@ -20,6 +23,9 @@
     align-items: center;
     color: $white;
     bottom: 20px;
+    @include respond-to("small") {
+      bottom: 62px;
+    }
     &--pic {
       margin-right: 10px;
       width: 15px;
@@ -27,6 +33,9 @@
     }
     &--txt {
       font-size: 24px;
+      @include respond-to("small") {
+        font-size: 12px;
+      }
     }
   }
 }

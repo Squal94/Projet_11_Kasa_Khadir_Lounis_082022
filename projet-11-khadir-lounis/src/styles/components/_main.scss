@@ -10,4 +10,14 @@
   padding: 20px 20px;
   max-width: $desktop-width;
   overflow: auto;
+  @include respond-to("small") {
+    border-radius: 0;
+    background-color: $white;
+    height: auto;
+    flex-flow: column nowrap;
+    margin: 22px auto;
+    padding: 0;
+    max-width: $mobile-width;
+    overflow: visible;
+  }
 }
