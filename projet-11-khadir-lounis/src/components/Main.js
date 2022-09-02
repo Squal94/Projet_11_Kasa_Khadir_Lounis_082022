@@ -4,11 +4,24 @@ import { NavLink } from "react-router-dom";
 import logements from "../logements.json";
 
 const Main = () => {
+  const addStorage = (props) => {
+    //localStorage.removeItem("appartData");
+    let appartData = "";
+    appartData = props;
+    window.localStorage.setItem("appartData", JSON.stringify(appartData));
+    // window.localStorage.appart = appartData;
+    //console.log(appartData);
+  };
   return (
     <main className="main">
       {logements.map((logement) => {
         return (
-          <NavLink id={logement.id} to={logement.cover} key={logement.id}>
+          <NavLink
+            id={logement.id}
+            to="/fiche"
+            key={logement.id}
+            onClick={() => addStorage(logement)}
+          >
             {Card(logement)}
           </NavLink>
         );
