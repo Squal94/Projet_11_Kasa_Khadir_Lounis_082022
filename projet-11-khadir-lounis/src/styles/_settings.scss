@@ -17,6 +17,12 @@ $primary-radius: 25px;
 $secondary-radius: 10px;
 $tertiary-radius: 5px;
 
+$breakpoints: (
+  "small": 767px,
+  "medium": 992px,
+  "large": 1240px,
+) !default;
+
 ::-webkit-scrollbar {
   display: none;
 }

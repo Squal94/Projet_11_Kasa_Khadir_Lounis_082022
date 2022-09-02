@@ -5,7 +5,7 @@ import logements from "../logements.json";
 
 const Main = () => {
   const addStorage = (props) => {
-    //localStorage.removeItem("appartData");
+    localStorage.removeItem("appartData");
     let appartData = "";
     appartData = props;
     window.localStorage.setItem("appartData", JSON.stringify(appartData));

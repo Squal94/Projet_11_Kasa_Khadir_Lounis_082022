@@ -1,0 +1,48 @@
+.fiche {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin: 25.36px auto;
+  &__cover {
+    border-radius: $primary-radius;
+    height: 415px;
+
+    width: $desktop-width;
+    object-fit: cover;
+  }
+  &__info {
+    color: $color-primary;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: $desktop-width;
+    margin: 30px auto 23px auto;
+    &__title {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      &--h1 {
+        font-size: 36px;
+      }
+      &--ville {
+        font-size: 18px;
+      }
+    }
+    &__vendeur {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      &--name {
+        font-size: 18px;
+        width: 93px;
+      }
+      &--photo {
+        border-radius: 50px;
+        margin-left: 10px;
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+}
