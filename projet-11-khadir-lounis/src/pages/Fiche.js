@@ -25,14 +25,14 @@ const Fiche = () => {
             <h1 className="fiche__info__title--h1">{Data.title}</h1>
             <p className="fiche__info__title--ville">{Data.location}</p>
           </div>
-          <div className="fiche__info__vendeur">
+          {/* <div className="fiche__info__vendeur">
             <p className="fiche__info__vendeur--name">{Data.host.name}</p>
             <img
               className="fiche__info__vendeur--photo"
               src={Data.host.picture}
               alt={Data.host.name}
             ></img>
-          </div>
+          </div> */}
         </div>
         <div className="fiche__tags">
           {/* <div className="fiche__tags--tag">{Data.tags.map((tag)=>{

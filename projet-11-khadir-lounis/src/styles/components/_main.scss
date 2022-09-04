@@ -10,6 +10,7 @@
   padding: 20px 20px;
   max-width: $desktop-width;
   overflow: auto;
+
   @include respond-to("small") {
     border-radius: 0;
     background-color: $white;

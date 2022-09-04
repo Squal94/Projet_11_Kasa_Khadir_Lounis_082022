@@ -26,20 +26,21 @@ $breakpoints: (
 ) !default;
 
 ::-webkit-scrollbar {
-  width: 20px;
+  width: 0px;
   background-color: #ff60604d;
   border-bottom-right-radius: $primary-radius;
   border-top-right-radius: $primary-radius;
+  transition: all 0.3s;
 }
-
-// ::-webkit-scrollbar-track {
-//   margin-block: 10px;
-// }
 
 ::-webkit-scrollbar-thumb {
   background-color: $color-primary;
   border-bottom-right-radius: $primary-radius;
   border-top-right-radius: $primary-radius;
+}
+
+.main:hover::-webkit-scrollbar {
+  width: 15px;
 }
 
 @mixin verticalCenter {
