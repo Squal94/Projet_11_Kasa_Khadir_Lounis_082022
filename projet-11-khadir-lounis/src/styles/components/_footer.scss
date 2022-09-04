@@ -1,5 +1,5 @@
 .footer {
-  margin: auto;
+  margin: 100px auto 0 auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -10,6 +10,7 @@
   max-width: 1440px;
   @include respond-to("small") {
     max-width: $mobile-width;
+    margin: 20px auto 0 auto;
   }
   &__logo {
     width: 122px;
