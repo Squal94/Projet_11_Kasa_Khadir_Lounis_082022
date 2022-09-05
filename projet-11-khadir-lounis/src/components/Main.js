@@ -1,26 +1,30 @@
 import React from "react";
 import Card from "./Card";
 import { NavLink } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
+//import { useParams } from "react-router-dom";
 import logements from "../logements.json";
 
 const Main = () => {
-  const addStorage = (props) => {
-    localStorage.removeItem("appartData");
-    let appartData = "";
-    appartData = props;
-    window.localStorage.setItem("appartData", JSON.stringify(appartData));
-    // window.localStorage.appart = appartData;
-    //console.log(appartData);
-  };
+  // let navigateUrl = useNavigate();
+  // const addUrlId = (props) => {
+  //   navigateUrl("/fiche/" + props);
+  //   // localStorage.removeItem("appartData");
+  //   // let appartData = "";
+  //   // appartData = props;
+  //   // window.localStorage.setItem("appartData", JSON.stringify(appartData));
+  // };
   return (
     <main className="main">
       {logements.map((logement) => {
         return (
           <NavLink
             id={logement.id}
-            to="/fiche"
             key={logement.id}
-            onClick={() => addStorage(logement)}
+            // onClick={() => {
+            //   addUrlId(logement.id);
+            // }}
+            to={"fiche/" + logement.id}
           >
             {Card(logement)}
           </NavLink>
