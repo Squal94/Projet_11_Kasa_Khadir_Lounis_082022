@@ -1,3 +1,5 @@
+@import "./Utlis/keyframe";
+
 @font-face {
   font-family: "Montserrat-1";
   src: url(../assets/fonts/Montserrat-Regular.otf);
@@ -30,17 +32,19 @@ $breakpoints: (
   background-color: #ff60604d;
   border-bottom-right-radius: $primary-radius;
   border-top-right-radius: $primary-radius;
-  transition: all 0.3s;
+  animation-duration: 2s;
+  animation-fill-mode: both;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $color-primary;
+  background-color: #f99595c9;
   border-bottom-right-radius: $primary-radius;
   border-top-right-radius: $primary-radius;
 }
 
 .main:hover::-webkit-scrollbar {
   width: 15px;
+  animation-name: slideout;
 }
 
 @mixin verticalCenter {

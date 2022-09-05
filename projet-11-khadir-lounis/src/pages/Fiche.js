@@ -11,7 +11,7 @@ const Fiche = () => {
   useEffect(() => {
     const appartData = window.localStorage.getItem("appartData");
     const data = JSON.parse(appartData);
-    console.log(data);
+
     setData({ ...data });
   }, []);
 
