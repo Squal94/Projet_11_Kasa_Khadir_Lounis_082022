@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import logements from "./../logements.json";
 import { Tag } from "../components/Tag";
+import { Rating } from "../components/Rating";
 
 const Fiche = () => {
   const [appartement, setAppartement] = useState({});
@@ -45,14 +46,16 @@ const Fiche = () => {
           </div>
         </div>
         <div className="fiche__tags">
-          {appartement.tags &&
-            appartement.tags.map((tag) => (
-              <div className="fiche__tags--tag" key={tag}>
-                {Tag(tag)}
-              </div>
-            ))}
+          <div className="fiche__tags__container">
+            {appartement.tags &&
+              appartement.tags.map((tag) => (
+                <div className="fiche__tags__container--tag" key={tag}>
+                  {Tag(tag)}
+                </div>
+              ))}
+          </div>
 
-          <div className="fiche__tags--note"></div>
+          <div className="fiche__tags--note">{Rating(appartement.rating)}</div>
         </div>
       </main>
       <Footer />
