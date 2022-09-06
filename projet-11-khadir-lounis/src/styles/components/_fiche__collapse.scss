@@ -1,0 +1,14 @@
+.fiche__collapse {
+  width: $desktop-width;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+
+  &--description {
+    width: 582px;
+    font-size: 18px;
+  }
+  &--equipement {
+    width: 582px;
+  }
+}

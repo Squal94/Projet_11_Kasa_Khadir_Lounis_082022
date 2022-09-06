@@ -12,7 +12,11 @@ const About = () => {
       <main>
         {Banner("", "banner_about")}
         {items.map((item) => {
-          return <div key={item.id}>{Collapse(item)}</div>;
+          return (
+            <div key={item.id}>
+              {Collapse(item, item.id, item.title, item.description)}
+            </div>
+          );
         })}
       </main>
       <Footer />

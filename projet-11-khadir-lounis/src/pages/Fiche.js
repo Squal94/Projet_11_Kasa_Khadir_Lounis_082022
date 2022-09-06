@@ -7,6 +7,9 @@ import Nav from "../components/Nav";
 import logements from "./../logements.json";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
+import { Collapse } from "../components/Collapse";
+import "./../assets/img/copyright.png";
+import "./../assets/img/down-arrow.png";
 
 const Fiche = () => {
   const [appartement, setAppartement] = useState({});
@@ -20,6 +23,14 @@ const Fiche = () => {
     );
     setAppartement(newAppartement);
   };
+  // const listeEquipements = (liste) => {
+  //   console.log(liste);
+  //   <ul>
+  //     {liste.map((equipement) => {
+  //       return <li>{equipement}</li>;
+  //     })}
+  //   </ul>;
+  // };
   return (
     <div>
       <Nav />
@@ -56,6 +67,33 @@ const Fiche = () => {
           </div>
 
           <div className="fiche__tags--note">{Rating(appartement.rating)}</div>
+        </div>
+        <div className="fiche__collapse">
+          <div
+            className="fiche__collapse--description"
+            key={appartement.description}
+          >
+            {Collapse(
+              appartement,
+              appartement.id,
+              "Description",
+              appartement.description
+            )}
+          </div>
+          <div
+            className="fiche__collapse--equipement"
+            key={appartement.equipments}
+          >
+            {Collapse(
+              appartement,
+              appartement.id,
+              "Equipement",
+              appartement.equipments &&
+                appartement.equipments.map((equipement) => {
+                  return <li key={equipement}>{equipement}</li>;
+                })
+            )}
+          </div>
         </div>
       </main>
       <Footer />

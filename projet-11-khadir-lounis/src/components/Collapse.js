@@ -1,7 +1,8 @@
 import React from "react";
 import { useState } from "react";
+import arrowDown from "./../assets/img/down-arrow.png";
 
-export function Collapse(props) {
+export function Collapse(pics, id, title, description) {
   const [setActive, setActiveState] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isRotate, setIsRotate] = useState("collapse__container__img");
@@ -17,14 +18,14 @@ export function Collapse(props) {
   }
 
   return (
-    <div className="collapse" id={props.id}>
+    <div className="collapse" id={id}>
       <div className="collapse__container">
         <button className="collapse__container__btn" onClick={() => Rotate()}>
-          {props.title}
+          {title}
         </button>
-        <img className={isRotate} src="./down-arrow.png" alt="Arrow" />
+        <img className={isRotate} src={arrowDown} alt="Arrow" />
       </div>
-      {isOpen && <div className="collapse__content">{props.description}</div>}
+      {isOpen && <div className="collapse__content">{description}</div>}
     </div>
   );
 }

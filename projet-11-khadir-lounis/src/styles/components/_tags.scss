@@ -17,12 +17,13 @@
   justify-content: center;
   align-items: center;
   height: $tag-height;
-  width: $tag-width;
+
   border-radius: $secondary-radius;
   color: $white;
   background-color: $color-primary;
   margin-right: 10px;
   &__name {
     font-size: $tag-font;
+    margin: 10px;
   }
 }
