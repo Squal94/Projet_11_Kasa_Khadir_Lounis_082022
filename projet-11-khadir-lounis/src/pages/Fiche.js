@@ -8,12 +8,14 @@ import logements from "./../logements.json";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
 import { Collapse } from "../components/Collapse";
+import { Slider } from "../components/Slider";
 import "./../assets/img/copyright.png";
 import "./../assets/img/down-arrow.png";
 
 const Fiche = () => {
   const [appartement, setAppartement] = useState({});
   const { appartementId } = useParams();
+
   useEffect(() => {
     getApparts();
   });
@@ -94,6 +96,11 @@ const Fiche = () => {
                 })
             )}
           </div>
+        </div>
+        <div className="test">
+          {Slider(
+            appartement && appartement.pictures && appartement.pictures[0]
+          )}
         </div>
       </main>
       <Footer />
