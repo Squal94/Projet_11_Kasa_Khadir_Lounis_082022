@@ -1,18 +1,18 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
+//import { useState } from "react";
 import { ReactComponent as Star } from "./../assets/img/star.svg";
 
 export function Rating(nb) {
   const numberOfStar = [1, 2, 3, 4, 5];
-  const [rating, setRating] = useState("");
+  //const [rating, setRating] = useState("");
 
   useEffect(() => {
     handleRating(nb);
   });
 
   const handleRating = (rate) => {
-    setRating(rate);
+    //setRating(rate);
     for (let i = 1; i <= rate; i++) {
       const starColorModif = document.querySelector(".star" + i);
       starColorModif.setAttribute("fill", "#ff6060");

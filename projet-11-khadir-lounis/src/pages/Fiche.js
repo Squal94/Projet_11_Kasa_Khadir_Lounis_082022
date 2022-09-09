@@ -49,23 +49,22 @@ const Fiche = () => {
           </div>
           <div className="fiche__info__vendeur">
             <p className="fiche__info__vendeur--name">
-              {appartement.host && appartement.host.name}
+              {appartement.host?.name}
             </p>
             <img
               className="fiche__info__vendeur--photo"
-              src={appartement.host && appartement.host.picture}
-              alt={appartement.host && appartement.host.name}
+              src={appartement.host?.picture}
+              alt={appartement.host?.name}
             ></img>
           </div>
         </div>
         <div className="fiche__tags">
           <div className="fiche__tags__container">
-            {appartement.tags &&
-              appartement.tags.map((tag) => (
-                <div className="fiche__tags__container--tag" key={tag}>
-                  {Tag(tag)}
-                </div>
-              ))}
+            {appartement.tags?.map((tag) => (
+              <div className="fiche__tags__container--tag" key={tag}>
+                {Tag(tag)}
+              </div>
+            ))}
           </div>
 
           <div className="fiche__tags--note">{Rating(appartement.rating)}</div>
@@ -90,18 +89,13 @@ const Fiche = () => {
               appartement,
               appartement.id,
               "Equipement",
-              appartement.equipments &&
-                appartement.equipments.map((equipement) => {
-                  return <li key={equipement}>{equipement}</li>;
-                })
+              appartement.equipments?.map((equipement) => {
+                return <li key={equipement}>{equipement}</li>;
+              })
             )}
           </div>
         </div>
-        <div className="test">
-          {Slider(
-            appartement && appartement.pictures && appartement.pictures[0]
-          )}
-        </div>
+        <div className="test">{Slider(appartement?.pictures)}</div>
       </main>
       <Footer />
     </div>
