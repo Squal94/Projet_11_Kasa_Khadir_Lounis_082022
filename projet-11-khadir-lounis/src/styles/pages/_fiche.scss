@@ -3,13 +3,11 @@
   flex-flow: column nowrap;
   align-items: center;
   margin: 25.36px auto;
-  &__cover {
-    border-radius: $primary-radius;
-    height: 415px;
-
-    width: $desktop-width;
-    object-fit: cover;
+  width: $desktop-width;
+  @include respond-to("small") {
+    width: $mobile-width;
   }
+
   &__info {
     color: $color-primary;
     display: flex;
@@ -18,31 +16,73 @@
     align-items: center;
     width: $desktop-width;
     margin: 30px auto 23px auto;
+    @include respond-to("small") {
+      width: $mobile-width;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
     &__title {
       display: flex;
       flex-flow: column nowrap;
       align-items: flex-start;
       &--h1 {
         font-size: 36px;
+        @include respond-to("small") {
+          font-size: 18px;
+        }
       }
       &--ville {
         font-size: 18px;
+        @include respond-to("small") {
+          font-size: 14px;
+        }
       }
     }
     &__vendeur {
       display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
-      &--name {
-        font-size: 18px;
-        width: 93px;
+      flex-flow: column nowrap;
+      @include respond-to("small") {
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+        width: $mobile-width;
       }
-      &--photo {
-        border-radius: 50px;
-        margin-left: 10px;
-        width: 64px;
-        height: 64px;
+      &--profil {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        &--name {
+          font-size: 18px;
+          width: 93px;
+          @include respond-to("small") {
+            font-size: 12px;
+            width: 50px;
+          }
+        }
+        &--photo {
+          border-radius: 50px;
+          margin-left: 10px;
+          width: 64px;
+          height: 64px;
+          @include respond-to("small") {
+            width: 32px;
+            height: 32px;
+          }
+        }
       }
     }
+  }
+}
+
+.container__rate {
+  margin: 20px 0px 20px 0;
+}
+
+.container__rate svg {
+  width: 30px;
+  margin: 5px;
+  @include respond-to("small") {
+    width: 15px;
   }
 }

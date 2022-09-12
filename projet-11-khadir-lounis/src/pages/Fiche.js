@@ -42,29 +42,33 @@ const Fiche = () => {
           <div className="fiche__info__title">
             <h1 className="fiche__info__title--h1">{appartement.title}</h1>
             <p className="fiche__info__title--ville">{appartement.location}</p>
+            <div className="fiche__tags">
+              <div className="fiche__tags__container">
+                {appartement.tags?.map((tag) => (
+                  <div className="fiche__tags__container--tag" key={tag}>
+                    {Tag(tag)}
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
           <div className="fiche__info__vendeur">
-            <p className="fiche__info__vendeur--name">
-              {appartement.host?.name}
-            </p>
-            <img
-              className="fiche__info__vendeur--photo"
-              src={appartement.host?.picture}
-              alt={appartement.host?.name}
-            ></img>
+            <div className="fiche__info__vendeur--profil">
+              <p className="fiche__info__vendeur--profil--name">
+                {appartement.host?.name}
+              </p>
+              <img
+                className="fiche__info__vendeur--profil--photo"
+                src={appartement.host?.picture}
+                alt={appartement.host?.name}
+              ></img>
+            </div>
+            <div className="fiche__tags--note">
+              {Rating(appartement.rating)}
+            </div>
           </div>
         </div>
-        <div className="fiche__tags">
-          <div className="fiche__tags__container">
-            {appartement.tags?.map((tag) => (
-              <div className="fiche__tags__container--tag" key={tag}>
-                {Tag(tag)}
-              </div>
-            ))}
-          </div>
 
-          <div className="fiche__tags--note">{Rating(appartement.rating)}</div>
-        </div>
         <div className="fiche__collapse">
           <div
             className="fiche__collapse--description"

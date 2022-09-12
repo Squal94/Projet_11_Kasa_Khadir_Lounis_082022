@@ -3,12 +3,25 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  @include respond-to("small") {
+    max-width: $mobile-width;
+    margin: 0;
+    flex-flow: column nowrap;
+  }
 
   &--description {
     width: 582px;
     font-size: 18px;
+    @include respond-to("small") {
+      max-width: $mobile-width;
+      font-size: 13px;
+    }
   }
   &--equipement {
     width: 582px;
+    @include respond-to("small") {
+      max-width: $mobile-width;
+      font-size: 13px;
+    }
   }
 }

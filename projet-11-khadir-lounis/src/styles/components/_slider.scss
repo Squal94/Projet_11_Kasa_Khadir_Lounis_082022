@@ -7,6 +7,11 @@
     height: 415px;
     border-radius: $primary-radius;
     overflow: hidden;
+    @include respond-to("small") {
+      border-radius: $tertiary-radius;
+      height: 255px;
+      max-width: $mobile-width;
+    }
 
     &--left {
       width: 150px;
@@ -17,9 +22,16 @@
       display: flex;
       align-items: center;
       transition: background-color 0.3s ease-in-out;
+      @include respond-to("small") {
+        width: 40px;
+      }
       &--pic {
         width: 150px;
         z-index: 5;
+        @include respond-to("small") {
+          width: 29.67px;
+          height: 29.8px;
+        }
       }
     }
     &--left:hover {
@@ -29,8 +41,11 @@
       object-fit: cover;
       width: $desktop-width;
       height: 415px;
+      @include respond-to("small") {
+        width: $mobile-width;
+        height: 255px;
+      }
     }
-
     &__count {
       position: absolute;
       right: 50%;
@@ -39,6 +54,9 @@
       width: 24px;
       color: $white;
       font-size: 18px;
+      @include respond-to("small") {
+        display: none;
+      }
     }
     &--right {
       width: 150px;
@@ -49,9 +67,16 @@
       display: flex;
       align-items: center;
       transition: background-color 0.3s ease-in-out;
+      @include respond-to("small") {
+        width: 40px;
+      }
       &--pic {
         width: 150px;
         z-index: 5;
+        @include respond-to("small") {
+          width: 29.67px;
+          height: 29.8px;
+        }
       }
     }
     &--right:hover {
