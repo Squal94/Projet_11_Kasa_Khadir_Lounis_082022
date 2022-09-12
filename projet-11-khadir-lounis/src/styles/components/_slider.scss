@@ -3,35 +3,49 @@
 
   &__container {
     position: relative;
+    width: $desktop-width;
+    height: 415px;
+    border-radius: $primary-radius;
+    overflow: hidden;
+
     &--left {
-      width: 50px;
+      width: 150px;
       position: absolute;
       left: 0;
       top: 0;
       height: 100%;
       display: flex;
       align-items: center;
+      transition: background-color 0.3s ease-in-out;
       &--pic {
         width: 150px;
+        z-index: 5;
       }
     }
     &--left:hover {
       background-color: rgba(255, 255, 255, 0.379);
     }
+    &__image {
+      object-fit: cover;
+      width: $desktop-width;
+      height: 415px;
+    }
     &--right {
-      width: 50px;
+      width: 150px;
       position: absolute;
-      right: 100px;
+      right: 0px;
       top: 0;
       height: 100%;
       display: flex;
       align-items: center;
+      transition: background-color 0.3s ease-in-out;
       &--pic {
         width: 150px;
+        z-index: 5;
       }
     }
-    &--right--pic:hover {
-      background-color: rgba(255, 173, 173, 0.379);
+    &--right:hover {
+      background-color: rgba(255, 255, 255, 0.379);
     }
   }
 }

@@ -37,11 +37,7 @@ const Fiche = () => {
     <div>
       <Nav />
       <main className="fiche">
-        <img
-          className="fiche__cover"
-          src={appartement.cover}
-          alt={appartement.title}
-        />
+        <div className="fiche__slider">{Slider(appartement?.pictures)}</div>
         <div className="fiche__info">
           <div className="fiche__info__title">
             <h1 className="fiche__info__title--h1">{appartement.title}</h1>
@@ -95,7 +91,6 @@ const Fiche = () => {
             )}
           </div>
         </div>
-        <div className="test">{Slider(appartement?.pictures)}</div>
       </main>
       <Footer />
     </div>

@@ -48,24 +48,25 @@ export function Slider(images) {
   // useEffect(() => {
   //   setAffichagePics(picsTableau?.[0]);
   // }, [picsTableau]);
-  function none() {
-    const left = document.querySelector(".slider__container--left");
-    const right = document.querySelector(".slider__container--right");
-    const arrowleft = document.querySelector(".slider__container--left--pic");
-    const arrowright = document.querySelector(".slider__container--right--pic");
-    if (length <= 1) {
-      left.setAttribute("display", "none");
-      right.setAttribute("display", "none");
-      arrowleft.setAttribute("opacity", "none");
-      arrowright.setAttribute("display", "none");
-    } else {
-      left.setAttribute("display", "flex");
-      right.setAttribute("display", "flex");
-      arrowleft.setAttribute("display", "block");
-      arrowright.setAttribute("display", "block");
-    }
-  }
-  none();
+  // function none() {
+  //   const left = document.querySelector(".slider__container--left");
+  //   const right = document.querySelector(".slider__container--right");
+  //   const arrowleft = document.querySelector(".slider__container--left--pic");
+  //   const arrowright = document.querySelector(".slider__container--right--pic");
+  //   if (length <= 1) {
+  //     left.setAttribute("display", "none");
+  //     right.setAttribute("display", "none");
+  //     arrowleft.setAttribute("opacity", "none");
+  //     arrowright.setAttribute("display", "none");
+  //   } else {
+  //     left.setAttribute("display", "flex");
+  //     right.setAttribute("display", "flex");
+  //     arrowleft.setAttribute("display", "block");
+  //     arrowright.setAttribute("display", "block");
+
+  //   }
+  // }
+  // none();
 
   function clickLeft() {
     setIndex(index === 0 ? length - 1 : index - 1);
@@ -78,21 +79,29 @@ export function Slider(images) {
   return (
     <div className="slider">
       <div className="slider__container">
-        <div onClick={clickLeft} className="slider__container--left">
-          <img
-            className="slider__container--left--pic"
-            src={arrowLeft}
-            alt="slider a gauche"
-          />
-        </div>
-        <img src={images?.[index]} alt="" />
-        <div onClick={clickRight} className="slider__container--right">
-          <img
-            className="slider__container--right--pic"
-            src={arrowRight}
-            alt="slider a droite"
-          />
-        </div>
+        {length > 1 && (
+          <div onClick={clickLeft} className="slider__container--left">
+            <img
+              className="slider__container--left--pic"
+              src={arrowLeft}
+              alt="slider a gauche"
+            />
+          </div>
+        )}
+        <img
+          className="slider__container__image"
+          src={images?.[index]}
+          alt=""
+        />
+        {length > 1 && (
+          <div onClick={clickRight} className="slider__container--right">
+            <img
+              className="slider__container--right--pic"
+              src={arrowRight}
+              alt="slider a droite"
+            />
+          </div>
+        )}
       </div>
     </div>
   );
