@@ -1,11 +1,21 @@
 import React from "react";
 import Card from "./Card";
-import { NavLink } from "react-router-dom";
+import {
+  //Navigate,
+  NavLink,
+  // Route,
+  // Redirect,
+  // Outlet,
+  //Link,
+} from "react-router-dom";
+
+//import D404 from "../pages/D404";
 //import { useNavigate } from "react-router-dom";
 //import { useParams } from "react-router-dom";
 import logements from "../logements.json";
 
 const Main = () => {
+  //const navigate = useNavigate();
   // let navigateUrl = useNavigate();
   // const addUrlId = (props) => {
   //   navigateUrl("/fiche/" + props);

@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import logements from "./../logements.json";
@@ -15,15 +15,21 @@ import "./../assets/img/down-arrow.png";
 const Fiche = () => {
   const [appartement, setAppartement] = useState({});
   const { appartementId } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
     getApparts();
   });
   const getApparts = () => {
-    const newAppartement = logements.find(
-      (appart) => appart.id === appartementId
-    );
-    setAppartement(newAppartement);
+    if (logements.find((appart) => appart.id === appartementId)) {
+      const newAppartement = logements.find(
+        (appart) => appart.id === appartementId
+      );
+      console.log(newAppartement);
+      setAppartement(newAppartement);
+    } else {
+      navigate("/404");
+    }
   };
   // const listeEquipements = (liste) => {
   //   console.log(liste);
@@ -156,6 +162,17 @@ export default Fiche;
 //     <Footer />
 //   </div>
 // );
+// };
+
+// const getApparts = () => {
+//   const newAppartement = logements.find((appart) =>
+//     appart.id === appartementId ? (
+//       appart.id === appartementId
+//     ) : (
+//       <Route path="http://localhost:3000/*" />
+//     )
+//   );
+//   setAppartement(newAppartement);
 // };
 
 // export default Fiche;
