@@ -93,6 +93,11 @@ export function Slider(images) {
           src={images?.[index]}
           alt=""
         />
+        <div className="slider__container__count">
+          <p>
+            {index + 1}/{length}
+          </p>
+        </div>
         {length > 1 && (
           <div onClick={clickRight} className="slider__container--right">
             <img

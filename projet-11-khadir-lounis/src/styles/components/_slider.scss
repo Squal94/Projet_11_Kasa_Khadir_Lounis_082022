@@ -30,6 +30,16 @@
       width: $desktop-width;
       height: 415px;
     }
+
+    &__count {
+      position: absolute;
+      right: 50%;
+      bottom: 0;
+      height: 32.4px;
+      width: 24px;
+      color: $white;
+      font-size: 18px;
+    }
     &--right {
       width: 150px;
       position: absolute;
