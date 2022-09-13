@@ -2,12 +2,24 @@ import React from "react";
 import { useEffect } from "react";
 import { ReactComponent as Star } from "./../assets/img/star.svg";
 
+/**
+ * Fonction Rating
+ * @param {nb} nb valeur récupérée dans chaque objet du Json "rating"
+ * Fonctionnalité qui permet d'afficher sous forme d'étoile les notes donnée au propriétaire
+ */
+
 export function Rating(nb) {
   const numberOfStar = [1, 2, 3, 4, 5];
 
   useEffect(() => {
     handleRating(nb);
   });
+
+  /**
+   * Fonction handleRating
+   * @param {rate} rate correspond au nb valeur récupérée dans chaque objet du Json "rating"
+   * Fonctionnalité qui permet grâce au setAttribute fill de changer la couleur du svg Etoile si elle est sélectionnée
+   */
 
   const handleRating = (rate) => {
     for (let i = 1; i <= rate; i++) {

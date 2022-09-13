@@ -1,5 +1,11 @@
 import React from "react";
 
+/**
+ * Fonction Card
+ * @param {props} props  données transmises lors de l'appel de la function
+ * Fonctionnalité utilisée dans un map pour créer une carte pour chaque appartement
+ */
+
 function Card(props) {
   return (
     <div className="card" key={props.id}>

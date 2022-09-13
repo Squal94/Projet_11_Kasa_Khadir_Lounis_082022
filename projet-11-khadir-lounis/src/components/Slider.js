@@ -3,6 +3,12 @@ import arrowLeft from "./../assets/img/arrowLeft.png";
 import arrowRight from "./../assets/img/arrowRight.png";
 import { useState } from "react";
 
+/**
+ * Fonction Slider
+ * @param {images} images liens des images de l'appartement reçu du Json "pictures"
+ * Fonctionnalité qui permet d'afficher un carrousel pour faire défiler les images de l'appartement
+ */
+
 export function Slider(images) {
   let length = images?.length;
 

@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "./../assets/img/Logo.png";
 
+// Composant de la navigation
+
 const Nav = () => {
   return (
     <header className="header">

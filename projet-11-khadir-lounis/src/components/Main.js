@@ -5,6 +5,8 @@ import logements from "../assets/data/logements.json";
 
 const Main = () => {
   return (
+    // Map sur tout les objets du Json Afin de de crée des cartes de chaque appartement grace au composant card
+    // Navlink permet de crée une carte cliquable ainsi que son chemin .
     <main className="main">
       {logements.map((logement) => {
         return (
