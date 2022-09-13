@@ -15,7 +15,6 @@ const App = () => {
         {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
         <Route path="*" element={<D404 />} />
         <Route path="/404" element={<D404 />} />
-        {/* <Route render={() => <Route path="*" element={<D404 />} />} /> */}
       </Routes>
     </BrowserRouter>
   );

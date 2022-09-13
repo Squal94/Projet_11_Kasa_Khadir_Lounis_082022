@@ -7,5 +7,3 @@ export function Banner(txt, classname) {
     </div>
   );
 }
-
-// Chez vous, partout et ailleurs
