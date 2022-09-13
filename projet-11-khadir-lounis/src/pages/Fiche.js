@@ -21,6 +21,12 @@ const Fiche = () => {
   useEffect(() => {
     getApparts();
   });
+
+  /**
+   * Fonction getApparts
+   * Permet grace au Hooks useParams de recuperer l' Id dans url et de retrouver son objet dans le Json
+   * Ensuite grâce au hooks useNavigate, permet de verifier si l'Id n'existe pas dans le Json de rediriger la page vers une erreur 404
+   */
   const getApparts = () => {
     if (logements.find((appart) => appart.id === appartementId)) {
       const newAppartement = logements.find(
