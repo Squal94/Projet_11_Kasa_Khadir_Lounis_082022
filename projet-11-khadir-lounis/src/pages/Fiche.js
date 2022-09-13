@@ -4,13 +4,14 @@ import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-import logements from "./../logements.json";
+import logements from "./../assets/data/logements.json";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
 import { Collapse } from "../components/Collapse";
 import { Slider } from "../components/Slider";
 import "./../assets/img/copyright.png";
 import "./../assets/img/down-arrow.png";
+import { TopPage } from "../components/Util/TopPage";
 
 const Fiche = () => {
   const [appartement, setAppartement] = useState({});
@@ -25,7 +26,6 @@ const Fiche = () => {
       const newAppartement = logements.find(
         (appart) => appart.id === appartementId
       );
-      console.log(newAppartement);
       setAppartement(newAppartement);
     } else {
       navigate("/404");
@@ -33,6 +33,7 @@ const Fiche = () => {
   };
   return (
     <div>
+      <TopPage />
       <Nav />
       <main className="fiche">
         <div className="fiche__slider">{Slider(appartement?.pictures)}</div>

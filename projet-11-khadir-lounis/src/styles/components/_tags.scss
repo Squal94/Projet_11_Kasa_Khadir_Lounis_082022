@@ -3,10 +3,6 @@
   flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
-  // width: $desktop-width;
-  // @include respond-to("small") {
-  //   width: $mobile-width;
-  // }
 
   &__container {
     display: flex;

@@ -1,22 +1,27 @@
 @import "./Utlis/keyframe";
 
+// Importation de font Montserrat
 @font-face {
   font-family: "Montserrat-1";
   src: url(../assets/fonts/Montserrat-Regular.otf);
 }
 
+// Initialisation de la variable font-1
 $font-1: "Montserrat-1", sans-serif;
 
+// Initialisation des variables de couleurs utilisées
 $color-primary: #ff6060;
 $color-3: #282c34;
 $background-color: #f6f6f6;
 $background-footer-color: #000000;
 $white: rgb(255, 255, 255);
+$card-linear-gradiant: #ffffff00, #00000048;
+
+// Initialisation des variables de tailles utilisées
 $desktop-width: 1240px;
 $mobile-width: 335px;
-$card-size: 340px;
 $card-size-mobile-height: 255px;
-$card-linear-gradiant: #ffffff00, #00000048;
+$card-size: 340px;
 $primary-radius: 25px;
 $secondary-radius: 10px;
 $tertiary-radius: 5px;
@@ -25,31 +30,12 @@ $tag-height: 25px;
 $tag-font: 14px;
 $tag-font-mobile: 10px;
 
+// Initialisation des variables de breakpoints utilisées
 $breakpoints: (
   "small": 767px,
   "medium": 992px,
   "large": 1240px,
 ) !default;
-
-::-webkit-scrollbar {
-  width: 0px;
-  background-color: #ff60604d;
-  border-bottom-right-radius: $primary-radius;
-  border-top-right-radius: $primary-radius;
-  animation-duration: 2s;
-  animation-fill-mode: both;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #f99595c9;
-  border-bottom-right-radius: $primary-radius;
-  border-top-right-radius: $primary-radius;
-}
-
-.main:hover::-webkit-scrollbar {
-  width: 15px;
-  animation-name: slideout;
-}
 
 @mixin verticalCenter {
   display: flex;

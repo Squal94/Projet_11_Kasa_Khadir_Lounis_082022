@@ -7,6 +7,7 @@
     height: 415px;
     border-radius: $primary-radius;
     overflow: hidden;
+    // Utilisation de breakpoint pour la partie mobile
     @include respond-to("small") {
       border-radius: $tertiary-radius;
       height: 255px;

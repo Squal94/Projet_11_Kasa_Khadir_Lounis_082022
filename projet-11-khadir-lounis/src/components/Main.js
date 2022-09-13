@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 import { NavLink } from "react-router-dom";
-import logements from "../logements.json";
+import logements from "../assets/data/logements.json";
 
 const Main = () => {
   return (
