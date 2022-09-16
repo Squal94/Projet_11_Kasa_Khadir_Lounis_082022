@@ -8,6 +8,9 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    @include respond-to("small") {
+      flex-flow: row wrap;
+    }
   }
 }
 
@@ -20,6 +23,11 @@
   color: $white;
   background-color: $color-primary;
   margin: 20px 10px 20px 0;
+  min-width: 84px;
+  @include respond-to("small") {
+    margin: 10px 10px 10px 0;
+    border-radius: $tertiary-radius;
+  }
   &__name {
     font-size: $tag-font;
     margin: 10px;

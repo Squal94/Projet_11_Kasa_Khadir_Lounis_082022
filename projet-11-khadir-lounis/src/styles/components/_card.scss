@@ -23,11 +23,15 @@
   }
 
   &__title {
-    bottom: 10px;
+    bottom: 2px;
+    display: flex;
+    align-items: center;
     color: $white;
     font-size: 18px;
+    font-weight: 500;
     margin: 10px;
     position: absolute;
-    width: 90%;
+    height: 50px;
+    width: 80%;
   }
 }
