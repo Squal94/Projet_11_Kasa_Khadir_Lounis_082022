@@ -5,7 +5,7 @@ import { ReactComponent as Star } from "./../assets/img/star.svg";
 /**
  * Fonction Rating
  * @param {nb} nb valeur récupérée dans chaque objet du Json "rating"
- * Fonctionnalité qui permet d'afficher sous forme d'étoile les notes donnée au propriétaire
+ * Fonctionnalité qui permet d'afficher sous forme d'étoile les notes données au propriétaire
  */
 
 export function Rating(nb) {

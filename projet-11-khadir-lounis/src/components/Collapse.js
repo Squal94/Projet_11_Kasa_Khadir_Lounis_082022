@@ -4,7 +4,7 @@ import arrowDown from "./../assets/img/down-arrow.png";
 
 /**
  * Fonction Collapse
- * @param {id} id permet de selectionner dans une base de donnée l'objet precis a recuperer
+ * @param {id} id permet de selectionner dans une base de donnée l'objet precis à recuperer
  * @param {title} title Insertion du titre du collapse
  * @param {description} description Insertion du contenu du collapse
  *
@@ -12,7 +12,7 @@ import arrowDown from "./../assets/img/down-arrow.png";
  */
 
 export function Collapse(pics, id, title, description) {
-  // Ces trois Hooks use state permette de gérer l'état de la flèche du collapse au fur et à mesure de leur utilisation
+  // Ces trois Hooks useState permettent de gérer l'état de la flèche du collapse au fur et à mesure de leur utilisation
   const [setActive, setActiveState] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isRotate, setIsRotate] = useState("collapse__container__img");
