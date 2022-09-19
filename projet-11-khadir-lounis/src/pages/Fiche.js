@@ -54,7 +54,7 @@ const Fiche = () => {
               <div className="fiche__tags__container">
                 {appartement.tags?.map((tag) => (
                   <div className="fiche__tags__container--tag" key={tag}>
-                    {Tag(tag)}
+                    <Tag tag={tag} />
                   </div>
                 ))}
               </div>
