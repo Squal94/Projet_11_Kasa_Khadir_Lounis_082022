@@ -4,5 +4,7 @@ Projet 11 Kaza (React) OCR
 Dependance install
 
 Npm i
-Nod.js
+
+Node.js
+
 npm create react app
