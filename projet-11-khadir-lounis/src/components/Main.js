@@ -1,7 +1,7 @@
 import React from "react";
-import Card from "./Card";
 import { NavLink } from "react-router-dom";
 import logements from "../assets/data/logements.json";
+import Card from "./Card";
 
 const Main = () => {
   return (
@@ -15,7 +15,7 @@ const Main = () => {
             key={logement.id}
             to={"fiche/" + logement.id}
           >
-            {Card(logement)}
+            <Card object={logement} />
           </NavLink>
         );
       })}
