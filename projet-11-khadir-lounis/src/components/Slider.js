@@ -2,17 +2,23 @@ import React from "react";
 import arrowLeft from "./../assets/img/arrowLeft.png";
 import arrowRight from "./../assets/img/arrowRight.png";
 import { useState } from "react";
+import { useEffect } from "react";
 
 /**
  * Fonction Slider
- * @param {images} images liens des images de l'appartement reçu du Json "pictures"
+ * @param {props} props liens des images de l'appartement reçu du Json "pictures"
  * Fonctionnalité qui permet d'afficher un carrousel pour faire défiler les images de l'appartement
  */
 
-export function Slider(images) {
-  let length = images?.length;
-
+const Slider = (props) => {
   const [index, setIndex] = useState(0);
+  const [pics, setPics] = useState([props.pics]);
+
+  useEffect(() => {
+    setPics(props.pics);
+  }, [props]);
+
+  let length = pics?.length;
 
   function clickLeft() {
     setIndex(index === 0 ? length - 1 : index - 1);
@@ -34,11 +40,7 @@ export function Slider(images) {
             />
           </div>
         )}
-        <img
-          className="slider__container__image"
-          src={images?.[index]}
-          alt=""
-        />
+        <img className="slider__container__image" src={pics?.[index]} alt="" />
         <div className="slider__container__count">
           <p>
             {index + 1}/{length}
@@ -56,4 +58,6 @@ export function Slider(images) {
       </div>
     </div>
   );
-}
+};
+
+export default Slider;

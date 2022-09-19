@@ -8,7 +8,7 @@ import logements from "./../assets/data/logements.json";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
 import { Collapse } from "../components/Collapse";
-import { Slider } from "../components/Slider";
+import Slider from "../components/Slider";
 import "./../assets/img/copyright.png";
 import "./../assets/img/down-arrow.png";
 import { TopPage } from "../components/Util/TopPage";
@@ -37,12 +37,15 @@ const Fiche = () => {
       navigate("/404");
     }
   };
+
   return (
     <div>
       <TopPage />
       <Nav />
       <main className="fiche">
-        <div className="fiche__slider">{Slider(appartement?.pictures)}</div>
+        <div className="fiche__slider">
+          <Slider pics={appartement.pictures} />
+        </div>
         <div className="fiche__info">
           <div className="fiche__info__title">
             <h1 className="fiche__info__title--h1">{appartement.title}</h1>

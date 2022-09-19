@@ -9,18 +9,16 @@ import { useState } from "react";
  */
 
 const Card = (props) => {
-  const [object, setObjects] = useState(props);
+  const [appartement, setAppartement] = useState(props.object);
 
   useEffect(() => {
-    setObjects(props);
+    setAppartement(props.object);
   }, [props]);
 
-  console.log(object);
-
   return (
-    <div className="card" key={object.object.id}>
-      <img className="card--img" src={object.object.cover} alt="" />
-      <h2 className="card__title">{object.object.title}</h2>
+    <div className="card" key={appartement.id}>
+      <img className="card--img" src={appartement.cover} alt="" />
+      <h2 className="card__title">{appartement.title}</h2>
     </div>
   );
 };
