@@ -14,7 +14,6 @@ const App = () => {
         <Route path="/fiche/:appartementId" element={<Fiche />} />
         {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
         <Route path="*" element={<D404 />} />
-        <Route path="/404" element={<D404 />} />
       </Routes>
     </BrowserRouter>
   );
