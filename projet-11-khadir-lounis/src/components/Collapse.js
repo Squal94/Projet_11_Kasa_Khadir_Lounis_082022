@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import arrowDown from "./../assets/img/down-arrow.png";
+import "../assets/data/collapses.json";
 
 /**
  * Fonction Collapse
@@ -11,7 +12,7 @@ import arrowDown from "./../assets/img/down-arrow.png";
  * Fonctionnalité qui permet de créer un collapse de maniere dynamique
  */
 
-export function Collapse(pics, id, title, description) {
+const Collapse = (props) => {
   // Ces trois Hooks useState permettent de gérer l'état de la flèche du collapse au fur et à mesure de leur utilisation
   const [setActive, setActiveState] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -28,15 +29,40 @@ export function Collapse(pics, id, title, description) {
     );
   }
 
+  console.log(props.object.id);
+
   return (
-    <div className="collapse" id={id}>
+    <div className="collapse" id={props.object.id}>
       <div className="collapse__container">
         <button className="collapse__container__btn" onClick={() => Rotate()}>
-          {title}
+          {props.object.title}
         </button>
         <img className={isRotate} src={arrowDown} alt="Arrow" />
       </div>
-      {isOpen && <div className="collapse__content">{description}</div>}
+      {isOpen && (
+        <div className="collapse__content">{props.object.description}</div>
+      )}
     </div>
   );
-}
+};
+
+export default Collapse;
+
+//  {Collapse(
+//               appartement,
+//               appartement.id,
+//               "Description",
+//               appartement.description
+//             )}
+//           </div>
+//           <div
+//             className="fiche__collapse--equipement"
+//             key={appartement.equipments}
+//           >
+//             {Collapse(
+//               appartement,
+//               appartement.id,
+//               "Equipement",
+//               appartement.equipments?.map((equipement) => {
+//                 return <li key={equipement}>{equipement}</li>;
+//               })

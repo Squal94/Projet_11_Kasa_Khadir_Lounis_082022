@@ -7,7 +7,7 @@ import Nav from "../components/Nav";
 import logements from "./../assets/data/logements.json";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
-import { Collapse } from "../components/Collapse";
+import Collapse from "../components/Collapse";
 import Slider from "../components/Slider";
 import "./../assets/img/copyright.png";
 import "./../assets/img/down-arrow.png";
@@ -82,25 +82,37 @@ const Fiche = () => {
             className="fiche__collapse--description"
             key={appartement.description}
           >
-            {Collapse(
+            <Collapse
+              id={appartement.id}
+              title={"Description"}
+              description={appartement.description}
+            />
+            {/* {Collapse(
               appartement,
               appartement.id,
               "Description",
               appartement.description
-            )}
+            )} */}
           </div>
           <div
             className="fiche__collapse--equipement"
             key={appartement.equipments}
           >
-            {Collapse(
+            <Collapse
+              id={appartement.id}
+              title={"Equipement"}
+              description={appartement.equipments?.map((equipement) => {
+                return <li key={equipement}>{equipement}</li>;
+              })}
+            />
+            {/* {Collapse(
               appartement,
               appartement.id,
               "Equipement",
               appartement.equipments?.map((equipement) => {
                 return <li key={equipement}>{equipement}</li>;
               })
-            )}
+            )} */}
           </div>
         </div>
       </main>
