@@ -8,11 +8,11 @@ import { ReactComponent as Star } from "./../assets/img/star.svg";
  * Fonctionnalité qui permet d'afficher sous forme d'étoile les notes données au propriétaire
  */
 
-export function Rating(nb) {
+export const Rating = (nb) => {
   const numberOfStar = [1, 2, 3, 4, 5];
 
   useEffect(() => {
-    handleRating(nb);
+    handleRating(nb.rate);
   });
 
   /**
@@ -42,4 +42,4 @@ export function Rating(nb) {
       })}
     </div>
   );
-}
+};

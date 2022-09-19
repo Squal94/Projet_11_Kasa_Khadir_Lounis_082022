@@ -72,7 +72,7 @@ const Fiche = () => {
               ></img>
             </div>
             <div className="fiche__tags--note">
-              {Rating(appartement.rating)}
+              <Rating rate={appartement.rating} />
             </div>
           </div>
         </div>
