@@ -2,7 +2,7 @@ Dependance install
 
 Npm i
 
-Nod.js
+Node.js
 
 npm create react app
 
