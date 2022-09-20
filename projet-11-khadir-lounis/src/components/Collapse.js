@@ -12,7 +12,7 @@ import arrowDown from "./../assets/img/down-arrow.png";
  * Fonctionnalité qui permet de créer un collapse de maniere dynamique
  */
 
-const Collapse = (props, content, title) => {
+const Collapse = (props, content) => {
   // Ces trois Hooks useState permettent de gérer l'état de la flèche du collapse au fur et à mesure de leur utilisation
   let idCollapse = "";
   let titleCollapse = "";
@@ -41,18 +41,15 @@ const Collapse = (props, content, title) => {
   }
   if (setObject.cover) {
     idCollapse = setObject.id;
-    titleCollapse = title;
-    console.log(setContent);
-    // descriptionCollapse = setContent.map((equipement) => {
-    //   return <li key={equipement}>{equipement}</li>;
-    // });
-    // } else if (setObject.equipments) {
-    //   idCollapse = setObject.id;
-    //   titleCollapse = "Equipement";
-    //   descriptionCollapse = setObject.equipments.map((equipement) => {
-    //     return <li key={equipement}>{equipement}</li>;
-    //   });
-    // }
+    if (Array.isArray(setContent)) {
+      titleCollapse = "Equipements";
+      descriptionCollapse = setContent.map((equipement) => {
+        return <li key={equipement}>{equipement}</li>;
+      });
+    } else {
+      titleCollapse = "Description";
+      descriptionCollapse = setContent;
+    }
   } else {
     idCollapse = setObject.id;
     titleCollapse = setObject.title;

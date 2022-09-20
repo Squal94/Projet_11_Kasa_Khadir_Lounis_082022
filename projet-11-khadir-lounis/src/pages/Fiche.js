@@ -82,21 +82,13 @@ const Fiche = () => {
             className="fiche__collapse--description"
             key={appartement.description}
           >
-            <Collapse
-              object={appartement}
-              content={appartement.description}
-              title={"Description"}
-            />
+            <Collapse object={appartement} content={appartement.description} />
           </div>
           <div
             className="fiche__collapse--equipement"
             key={appartement.equipments}
           >
-            <Collapse
-              object={appartement}
-              content={appartement.equipments}
-              title={"Equipements"}
-            />
+            <Collapse object={appartement} content={appartement.equipments} />
           </div>
         </div>
       </main>
