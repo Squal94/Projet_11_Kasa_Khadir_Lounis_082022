@@ -5,9 +5,8 @@ import arrowDown from "./../assets/img/down-arrow.png";
 
 /**
  * Fonction Collapse
- * @param {id} id permet de selectionner dans une base de donnée l'objet precis à recuperer
- * @param {title} title Insertion du titre du collapse
- * @param {description} description Insertion du contenu du collapse
+ * @param {props} id permet de selectionner dans une base de donnée l'objet precis à recuperer
+ * @param {content} description Insertion du contenu du collapse
  *
  * Fonctionnalité qui permet de créer un collapse de maniere dynamique
  */
