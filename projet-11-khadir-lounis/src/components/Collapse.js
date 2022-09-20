@@ -1,7 +1,7 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import arrowDown from "./../assets/img/down-arrow.png";
-import "../assets/data/collapses.json";
 
 /**
  * Fonction Collapse
@@ -12,11 +12,22 @@ import "../assets/data/collapses.json";
  * Fonctionnalité qui permet de créer un collapse de maniere dynamique
  */
 
-const Collapse = (props) => {
+const Collapse = (props, content, title) => {
   // Ces trois Hooks useState permettent de gérer l'état de la flèche du collapse au fur et à mesure de leur utilisation
+  let idCollapse = "";
+  let titleCollapse = "";
+  let descriptionCollapse = "";
+
+  const [setObject, setObjectState] = useState(props.object);
+  const [setContent, setContentState] = useState(content);
   const [setActive, setActiveState] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isRotate, setIsRotate] = useState("collapse__container__img");
+
+  useEffect(() => {
+    setObjectState(props.object);
+    setContentState(props.content);
+  }, [props]);
 
   // Fonction de rotation de la flèche du collapse selon l'État des Hooks
   function Rotate() {
@@ -28,41 +39,37 @@ const Collapse = (props) => {
         : "collapse__container__img rotate"
     );
   }
-
-  console.log(props.object.id);
+  if (setObject.cover) {
+    idCollapse = setObject.id;
+    titleCollapse = title;
+    console.log(setContent);
+    // descriptionCollapse = setContent.map((equipement) => {
+    //   return <li key={equipement}>{equipement}</li>;
+    // });
+    // } else if (setObject.equipments) {
+    //   idCollapse = setObject.id;
+    //   titleCollapse = "Equipement";
+    //   descriptionCollapse = setObject.equipments.map((equipement) => {
+    //     return <li key={equipement}>{equipement}</li>;
+    //   });
+    // }
+  } else {
+    idCollapse = setObject.id;
+    titleCollapse = setObject.title;
+    descriptionCollapse = setObject.description;
+  }
 
   return (
-    <div className="collapse" id={props.object.id}>
+    <div className="collapse" id={idCollapse}>
       <div className="collapse__container">
         <button className="collapse__container__btn" onClick={() => Rotate()}>
-          {props.object.title}
+          {titleCollapse}
         </button>
         <img className={isRotate} src={arrowDown} alt="Arrow" />
       </div>
-      {isOpen && (
-        <div className="collapse__content">{props.object.description}</div>
-      )}
+      {isOpen && <div className="collapse__content">{descriptionCollapse}</div>}
     </div>
   );
 };
 
 export default Collapse;
-
-//  {Collapse(
-//               appartement,
-//               appartement.id,
-//               "Description",
-//               appartement.description
-//             )}
-//           </div>
-//           <div
-//             className="fiche__collapse--equipement"
-//             key={appartement.equipments}
-//           >
-//             {Collapse(
-//               appartement,
-//               appartement.id,
-//               "Equipement",
-//               appartement.equipments?.map((equipement) => {
-//                 return <li key={equipement}>{equipement}</li>;
-//               })

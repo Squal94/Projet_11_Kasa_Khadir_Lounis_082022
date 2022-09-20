@@ -7,11 +7,11 @@ import Nav from "../components/Nav";
 import logements from "./../assets/data/logements.json";
 import { Tag } from "../components/Tag";
 import { Rating } from "../components/Rating";
-import Collapse from "../components/Collapse";
 import Slider from "../components/Slider";
 import "./../assets/img/copyright.png";
 import "./../assets/img/down-arrow.png";
 import { TopPage } from "../components/Util/TopPage";
+import Collapse from "../components/Collapse";
 
 const Fiche = () => {
   const [appartement, setAppartement] = useState({});
@@ -83,36 +83,20 @@ const Fiche = () => {
             key={appartement.description}
           >
             <Collapse
-              id={appartement.id}
+              object={appartement}
+              content={appartement.description}
               title={"Description"}
-              description={appartement.description}
             />
-            {/* {Collapse(
-              appartement,
-              appartement.id,
-              "Description",
-              appartement.description
-            )} */}
           </div>
           <div
             className="fiche__collapse--equipement"
             key={appartement.equipments}
           >
             <Collapse
-              id={appartement.id}
-              title={"Equipement"}
-              description={appartement.equipments?.map((equipement) => {
-                return <li key={equipement}>{equipement}</li>;
-              })}
+              object={appartement}
+              content={appartement.equipments}
+              title={"Equipements"}
             />
-            {/* {Collapse(
-              appartement,
-              appartement.id,
-              "Equipement",
-              appartement.equipments?.map((equipement) => {
-                return <li key={equipement}>{equipement}</li>;
-              })
-            )} */}
           </div>
         </div>
       </main>

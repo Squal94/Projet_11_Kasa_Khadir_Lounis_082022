@@ -2,9 +2,9 @@ import React from "react";
 import Nav from "../components/Nav";
 import { Banner } from "../components/Banner";
 import Footer from "../components/Footer";
-import Collapse from "../components/Collapse";
 import items from "../assets/data/collapses.json";
 import { TopPage } from "../components/Util/TopPage";
+import Collapse from "../components/Collapse";
 
 const About = () => {
   return (
